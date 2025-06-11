@@ -27,6 +27,7 @@ func init() {
 	// define client options
 	clientOptions := options.Client().ApplyURI(connectionString)
 
+
 	// connect to MongoDB
 	client, err := mongo.Connect(context.TODO(), clientOptions)
 	if err != nil {
@@ -40,7 +41,7 @@ func init() {
 	fmt.Println("Collection reference is ready")
 }
 
-//Mongodb helpers
+//Mongodb helper functions
 
 // insert 1 record
 func insertOneMovie(movie model.Netflix) {
